@@ -27,3 +27,9 @@ call cadaluno('bartolomeu',20,'bart@email.com.br');
 
 select * from aluno;
 SELECT @idadeTotal;
+
+DROP VIEW IF EXISTS cadaluno;
+CREATE VIEW cadaluno AS (SELECT nome, idade, email, estado
+      FROM Aluno
+      );
+select * from cadaluno;
